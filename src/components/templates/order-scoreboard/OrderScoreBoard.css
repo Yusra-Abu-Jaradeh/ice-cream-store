@@ -1,0 +1,19 @@
+.scoreboard {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+.scoreboard-title {
+  font-family: cursive;
+  margin-top: 7%;
+  margin-bottom: auto;
+  width: 80%;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+.scoreboard-table {
+  margin-left: 50%;
+  width: 80%;
+}

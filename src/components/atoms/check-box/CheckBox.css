@@ -1,0 +1,10 @@
+.checkbox-title {
+  font-family: cursive;
+  font-size: 30px;
+  width: 100px;
+}
+.box {
+  width: 25px; /*Desired width*/
+  height: 25px; /*Desired height*/
+  cursor: pointer;
+}
