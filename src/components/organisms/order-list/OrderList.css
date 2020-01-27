@@ -1,7 +1,11 @@
+.order-list-title {
+  font-family: sans-serif;
+  display: inline-block;
+}
 .Order-list {
   margin-top: 10px;
   width: 40%;
   display: inline-block;
   vertical-align: top;
-  border-color: rgb(82, 92, 233);
+  border-color: black;
 }

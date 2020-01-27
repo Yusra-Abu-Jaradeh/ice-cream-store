@@ -6,9 +6,9 @@ import Separator from "../../../components/atoms/separator/Separator";
 function OrderStatus() {
   return (
     <div className="Order-status">
-      <OrderList />
+      <OrderList name={"ready for pickup"} />
       <Separator />
-      <OrderList />
+      <OrderList name={"being prepared"} />
     </div>
   );
 }

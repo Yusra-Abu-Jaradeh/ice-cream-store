@@ -18,7 +18,7 @@ function OrderRow() {
         <tr>
           <td>Order-number</td>
           <td className="row-description">Order-description</td>
-          <Button />
+          <Button name="ready" className={"order-row-button"} />
         </tr>
       </table>
     </div>

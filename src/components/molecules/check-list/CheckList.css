@@ -1,4 +1,6 @@
 .container-checks {
   border: 1px solid black;
-  width: 50%;
+  padding-left: 10px;
+  padding-right: 160px;
+  width: 100%;
 }

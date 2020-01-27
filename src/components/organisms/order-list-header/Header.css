@@ -1,0 +1,14 @@
+.Order-row-title {
+  font-family: cursive;
+  font-size: 50px;
+  text-align: center;
+}
+.header {
+  margin-top: 20%;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("../../../assets/Happy_Little_Soul.otf");
+  font-weight: bold;
+}
