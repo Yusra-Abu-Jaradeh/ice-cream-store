@@ -2,29 +2,28 @@ import React from "react";
 import "./OrderDDList.css";
 import Title from "../../../components/atoms/title/Title";
 import CheckList from "../../../components/molecules/check-list/CheckList";
-
 function OrderDDList(props) {
-  const headers = props.icecream.map((header, index) => (
-    <Title key={index + " " + console.log(header.title)} header={header} />
-  ));
-  const creamates = props.icecream.map((creamate, index) => (
-    <CheckList key={index + " " + creamate.title} creamate={creamate} />
-  ));
+  let id;
+  const creamates = props.icecream
+    ? props.icecream.map((creamate, index) => (
+        <div className="container-order-dd-list">
+          <Title
+            key={index + " " + creamate.title}
+            name={creamate.title}
+            className="Order-list-title"
+          />
+          <CheckList
+            key={index + " " + creamate.id}
+            name={creamate.ingredients}
+            className="Order-dd-list"
+          />
+        </div>
+      ))
+    : null;
+
   //   console.log("}}}}}}}}}}");
-  //   console.log(headers);
+  //   console.log(creamates);
   //   console.log("{{{{{{{{{{");
-  return (
-    <div className="Order-dd-list">
-      <Title className="Order-list-title" icecream={headers}>
-        {console.log(headers)}
-        {headers}
-      </Title>
-    </div>
-  );
+  return <div className="container-order-dd-list">{creamates}</div>;
 }
 export default OrderDDList;
-{
-  /* <CheckList key={index + creamate.ingredients} creamate={creamate}>
-{creamate.ingredients}
-</CheckList> */
-}

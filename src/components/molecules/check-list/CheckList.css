@@ -1,6 +1,8 @@
 .container-checks {
   border: 1px solid black;
+  margin-left: 10px;
+  margin-right: 10px;
   padding-left: 10px;
   padding-right: 160px;
-  width: 100%;
+  width: 55%;
 }

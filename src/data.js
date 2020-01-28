@@ -1,6 +1,6 @@
 const icecream = [
   {
-    title: "Base (required)",
+    title: "Base (required) ",
     ingredients: [
       "Vanilla ",
       "Chocolate ",
@@ -11,7 +11,7 @@ const icecream = [
     ]
   },
   {
-    title: "nuts",
+    title: "nuts ",
     ingredients: [
       "almonds ",
       "pistachio ",
@@ -22,7 +22,7 @@ const icecream = [
     ]
   },
   {
-    title: "sauces",
+    title: "sauces ",
     ingredients: [
       "Raspberry",
       "toffee",
@@ -33,7 +33,7 @@ const icecream = [
     ]
   },
   {
-    title: "fruits",
+    title: "fruits ",
     ingredients: [
       "kiwi",
       "banana",
@@ -44,7 +44,7 @@ const icecream = [
     ]
   },
   {
-    title: "boked yuminess",
+    title: "boked yuminess ",
     ingredients: [
       "biscuit",
       "coconut",
