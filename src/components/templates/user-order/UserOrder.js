@@ -1,4 +1,6 @@
 import React from "react";
+import iceCreamStore from "../../../store.js";
+import { observer } from "mobx-react";
 
 // style
 import "./UserOrder.css";
@@ -11,27 +13,23 @@ import Button from "../../atoms/button/Button";
 class UserOrder extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isClicked: false };
+    this.state = {
+      isClicked: true
+    };
 
     // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
   }
+
   handleClick = () => {
-    console.log("this is:", this);
+    console.log("handleClick=> this is:", this);
     this.setState(state => ({
       isClicked: !state.isClicked
     }));
   };
   render() {
-    console.log(this.isClicked);
-
-    var msg;
-    if (this.isClicked) {
-      msg = "clicked";
-    } else {
-      msg = "unclicked";
-    }
-    console.log(msg);
+    // console.log("************");
+    // console.log(this.state.isClicked);
 
     return (
       <div className="user-order">
@@ -39,7 +37,7 @@ class UserOrder extends React.Component {
           name={"Cremate your own ice cream"}
           className="user-order-title"
         />
-        <OrderDDList icecream={this.props.icecream} />
+        <OrderDDList store={iceCreamStore} />
         <Button
           name={"Submit order"}
           className={"submit"}
@@ -50,4 +48,4 @@ class UserOrder extends React.Component {
     );
   }
 }
-export default UserOrder;
+export default observer(UserOrder);

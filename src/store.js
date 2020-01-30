@@ -1,14 +1,16 @@
 import { decorate, observable, computed } from "mobx";
+import dataSource from "./data";
 
 class Store {
+  data = dataSource;
   // variables
-  icecreams = [];
-  orders = [];
+  isChecked = false;
 }
 decorate(Store, {
   // observable properties
-  icecreams: observable
+  data: observable,
+  isChecked: observable
   // computed properties
 });
-const Store = new Store();
-export default Store;
+let iceCreamStore = new Store();
+export default iceCreamStore;

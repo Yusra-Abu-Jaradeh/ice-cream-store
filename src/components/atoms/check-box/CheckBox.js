@@ -1,6 +1,8 @@
 import React from "react";
 import "./CheckBox.css";
 import OrderDDList from "../../organisms/order-dd-list/OrderDDList";
+import iceCreamStore from "../../../store";
+import { observer } from "mobx-react";
 
 class CheckBox extends React.Component {
   constructor(props) {
@@ -12,20 +14,26 @@ class CheckBox extends React.Component {
   }
 
   handleInputChange(event) {
+    ///this.props.iceCreamStoreFunction(value, name)
     const target = event.target;
     const value = target.type === "checkbox" ? target.isChecked : target.value;
     const name = target.name;
+    console.log("&&&&&&&&&&&&");
+    console.log(this.props);
+    console.log("&&&&&&&&&&&&");
 
-    this.setState({
+    iceCreamStore.setState({
       [name]: value,
       isChecked: true
     });
   }
+  // const chosenIcecream = this.props.name.map(ice=>(
 
+  // ))
   render() {
-    console.log("--------");
-    console.log(this.props);
-    console.log("--------");
+    // console.log("--------");
+    // console.log(this.props.isChecked);
+    // console.log("--------");
 
     return (
       <form>
@@ -35,7 +43,7 @@ class CheckBox extends React.Component {
             // name="checkbox"
             type="checkbox"
             isChecked={this.state.isChecked}
-            onChange={this.handleInputChange}
+            onChange={this.state.handleInputChange}
           />
           {this.props.name}
         </label>
@@ -44,4 +52,5 @@ class CheckBox extends React.Component {
   }
 }
 
+// export default observer(CheckBox);
 export default CheckBox;

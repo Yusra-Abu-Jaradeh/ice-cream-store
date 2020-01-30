@@ -1,11 +1,12 @@
 import React from "react";
+import { observer } from "mobx-react";
+
 import "./OrderDDList.css";
 import Title from "../../../components/atoms/title/Title";
 import CheckList from "../../../components/molecules/check-list/CheckList";
 function OrderDDList(props) {
-  let id;
-  const creamates = props.icecream
-    ? props.icecream.map((creamate, index) => (
+  const creamates = props.store.data
+    ? props.store.data.map((creamate, index) => (
         <div className="container-order-dd-list">
           <Title
             key={index + " " + creamate.title}
@@ -22,8 +23,8 @@ function OrderDDList(props) {
     : null;
 
   //   console.log("}}}}}}}}}}");
-  //   console.log(creamates);
+  //   console.log(props.store.data);
   //   console.log("{{{{{{{{{{");
   return <div className="container-order-dd-list">{creamates}</div>;
 }
-export default OrderDDList;
+export default observer(OrderDDList);
